@@ -13,6 +13,8 @@ from .models import Animal
 class ListAnimals(generics.ListAPIView):
     """ List Animals in the system with pagination.
     """
+    model = Animal
+    queryset = model.objects.all()
 
     def get(self, request, format=None):
         """

@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
             name='Animal',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('family', models.CharField(max_length=30, unique=True)),
+                ('family', models.CharField(max_length=30)),
                 ('email_address', models.EmailField(max_length=254, unique=True)),
                 ('name', models.CharField(max_length=32, unique=True)),
                 ('secret_key', models.CharField(max_length=32, unique=True)),
