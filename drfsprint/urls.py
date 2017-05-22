@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from rest_framework.routers import DefaultRouter
+from sprint.views import ProgrammerViewSet
+router = DefaultRouter(trailing_slash=False)
+router.register('programmers', ProgrammerViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-
 ]
+
+urlpatterns += router.urls
