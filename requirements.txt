@@ -4,4 +4,4 @@ ipython
 django-extensions
 
 # For API
-djangorestframework==2.6.3
+djangorestframework==3.6.3
